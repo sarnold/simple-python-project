@@ -1,6 +1,81 @@
-Python Project Template
-=======================
+Simple Python Project
+=====================
 
+Python project using simple setuptools project config; note package
+data, scripts, entry points, etc, **all still work** using pyproject.toml
+per `setuptools documentation`_.
+
+|ci| |wheels| |bandit| |release|
+
+|pre| |cov| |pylint|
+
+|tag| |license| |reuse| |python|
+
+To use this template, replace the example project name with your own:
+
+* change the project name at the top of ``pyproject.toml``
+* change the package directory name under the ``src`` folder
+* change the github URL paths in ``pyproject.toml``
+* change the project name in ``docs/source/conf.py``
+
+
+.. _setuptools documentation: https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
+
+Github workflows and setuptools_scm
+-----------------------------------
+
+This project uses setuptools_scm_ for dynamic versioning, therefor some
+of the (github) workflows will look for a git tag to set the version in
+CI. If there are no tags, this will result in some failed workflow runs.
+There are several options to make them succeed:
+
+* create a base tag, eg ``git tag -a 0.0.0``
+* set SETUPTOOLS_SCM_PRETEND_VERSION to the above value in the workflow env
+* disable failing workflows in the Github Actions tab
+* delete any workflows you don't need
+
+
+Github workflows and repo settings
+----------------------------------
+
+Some of the automation workflows may also fail without some non-default
+repository settings; the following changes are required to allow these
+workflows to run.
+
+Go to the repository Settings tab and scroll to the bottom of the General
+settings and enable these checkboxes under Pull Requests:
+
+* Always suggest updating pull request branches (optional)
+* Allow auto-merge (required)
+* Automatically delete head branches (optional)
+
+Next, in the left-hand menu under the Settings tab, click Actions, then General,
+then scroll to Workflow permissions:
+
+* make sure *Read repository contents and packages permissions* is selected
+* enable the *Allow GitHub Actions to create and approve pull requests* checkbox,
+  then click Save
+
+In addition, the provided dependabot config expects some issue labels, so open the
+project URL below (using your new project name) and add the following new labels:
+
+**https://github.com/<your_name>/<project_name>/issues/labels**
+
+* actions
+* dependencies
+* packaging
+
+
+Github best practices
+---------------------
+
+Finally, best practices for public repositories includes following extra
+features:
+
+* under Advanced Security enable Code Scanning, Dependabot, Private
+  Vulnerability Reporting, and (default) Codeql config
+* under Rules => Rulesets add some branch protection rules with required
+  status checks
 
 
 Make a ``badges`` branch
@@ -14,7 +89,6 @@ checkout, run the following commands::
   $ git commit --allow-empty -m "Initializing badges branch"
   $ git push origin badges
   $ git checkout main
-
 
 
 Dev tools
@@ -142,3 +216,53 @@ specifications.
 .. _sbom4python: https://github.com/anthonyharrison/sbom4python
 .. _gitchangelog: https://github.com/sarnold/gitchangelog
 .. _pre-commit: http://pre-commit.com/
+.. _setuptools_scm: https://setuptools-scm.readthedocs.io/en/stable/
+
+
+.. |ci| image:: https://github.com/sarnold/doorstop-to-mermaid/actions/workflows/ci.yml/badge.svg
+    :target: https://github.com/sarnold/doorstop-to-mermaid/actions/workflows/ci.yml
+    :alt: CI Status
+
+.. |wheels| image:: https://github.com/sarnold/doorstop-to-mermaid/actions/workflows/wheels.yml/badge.svg
+    :target: https://github.com/sarnold/doorstop-to-mermaid/actions/workflows/wheels.yml
+    :alt: Wheel Status
+
+.. |badge| image:: https://github.com/sarnold/doorstop-to-mermaid/actions/workflows/pylint.yml/badge.svg
+    :target: https://github.com/sarnold/doorstop-to-mermaid/actions/workflows/pylint.yml
+    :alt: Pylint Status
+
+.. |release| image:: https://github.com/sarnold/doorstop-to-mermaid/actions/workflows/release.yml/badge.svg
+    :target: https://github.com/sarnold/doorstop-to-mermaid/actions/workflows/release.yml
+    :alt: Release Status
+
+.. |bandit| image:: https://github.com/sarnold/doorstop-to-mermaid/actions/workflows/bandit.yml/badge.svg
+    :target: https://github.com/sarnold/doorstop-to-mermaid/actions/workflows/bandit.yml
+    :alt: Security check - Bandit
+
+.. |cov| image:: https://raw.githubusercontent.com/sarnold/doorstop-to-mermaid/badges/main/test-coverage.svg
+    :target: https://github.com/sarnold/doorstop-to-mermaid/actions/workflows/coverage.yml
+    :alt: Test coverage
+
+.. |pylint| image:: https://raw.githubusercontent.com/sarnold/doorstop-to-mermaid/badges/main/pylint-score.svg
+    :target: https://github.com/sarnold/doorstop-to-mermaid/actions/workflows/pylint.yml
+    :alt: Pylint Score
+
+.. |license| image:: https://img.shields.io/badge/license-MIT-blue
+    :target: https://github.com/sarnold/doorstop-to-mermaid/blob/main/LICENSE
+    :alt: License
+
+.. |tag| image:: https://img.shields.io/github/v/tag/sarnold/doorstop-to-mermaid?color=green&include_prereleases&label=latest%20release
+    :target: https://github.com/sarnold/doorstop-to-mermaid/releases
+    :alt: GitHub tag
+
+.. |python| image:: https://img.shields.io/badge/python-3.9+-blue.svg
+    :target: https://www.python.org/downloads/
+    :alt: Python
+
+.. |reuse| image:: https://api.reuse.software/badge/git.fsfe.org/reuse/api
+    :target: https://api.reuse.software/info/git.fsfe.org/reuse/api
+    :alt: REUSE status
+
+.. |pre| image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
+   :target: https://github.com/pre-commit/pre-commit
+   :alt: pre-commit
