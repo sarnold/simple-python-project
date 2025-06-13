@@ -1,10 +1,9 @@
 from pathlib import Path
 
+import pytest
 from munch import Munch
 
-from ds2mermaid import version
-
-import pytest
+from simple import version
 
 
 def test_nothing(capfd):

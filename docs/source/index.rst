@@ -1,4 +1,4 @@
-Foobar API and SW Docs
+Simple API and SW Docs
 ======================
 
 .. git_commit_detail::
@@ -10,10 +10,10 @@ Foobar API and SW Docs
     :no_github_link:
 
 .. toctree::
-    :maxdepth: 3
+    :maxdepth: 1
     :caption: Contents:
 
-    readme_include
+    README
     api/modules
     dev/generate-changelog
     dev/pre-commit-config

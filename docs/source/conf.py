@@ -12,16 +12,16 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..',
 
 # -- Project information -----------------------------------------------------
 
-proj_name = 'ds2mermaid'
+proj_name = 'simple'
 # The full version, including alpha/beta/rc tags with setuptols-scm
 # workaround for extra-long dirty version string
 release = version(proj_name).split("+")[0]
-# The short X.Y version.
-version = '.'.join(release.split('.')[:2])
+# Use dev version instead of short X.Y version.
+version = release
 
 project = proj_name
-author = 'Goleta Star, LLC'
-copyright = '2022 - ' + str(datetime.now().year) + f' {author}'
+author = 'Tracy Developer'
+copyright = str(datetime.now().year) + f' {author}'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -48,22 +48,11 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
     'sphinx.ext.viewcode',
-    'recommonmark',
+    'myst_parser',
 ]
 
-# autoapi
-#autoapi_dirs = ['../../src']
-
-# API docs
-# apidoc_modules = [
-    # {
-        # "path": f"../../src/{proj_name}",
-        # "destination": "api/",
-    # },
-# ]
-
 # sphinxcontrib.apidoc
-apidoc_module_dir = '../../src'
+apidoc_module_dir = f'../../src/{project}'
 apidoc_output_dir = 'api'
 apidoc_excluded_paths = ['scripts', 'tests']
 apidoc_module_first = True
@@ -76,7 +65,10 @@ templates_path = ['_templates']
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of strings:
 #
-source_suffix = ['.rst', '.md']
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
+}
 
 # The master toctree document.
 master_doc = 'index'
@@ -94,19 +86,19 @@ language = 'en'
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 'data']
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+pygments_style = 'manni'
 
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
-
 
 # -- Options for HTML output ----------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-#html_theme = 'sphinx_rtd_theme'
-html_theme = 'classic'  # still has a version
+html_theme = 'sphinx_rtd_theme'
+# setup in https://sphinx-nefertiti.readthedocs.io/latest/quick-start.html
+#html_theme = 'sphinx_nefertiti'
 
 html_sidebars = {
     '**': [
@@ -135,7 +127,7 @@ html_sidebars = {
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'ds2mermaiddoc'
+htmlhelp_basename = 'simpledoc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -162,7 +154,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'ds2mermaid.tex', 'ds2mermaid Documentation',
+    (master_doc, 'simple.tex', 'simple Documentation',
      [author], 'manual'),
 ]
 
@@ -172,7 +164,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'ds2mermaid', 'ds2mermaid Documentation',
+    (master_doc, 'simple', 'simple Documentation',
      [author], 1)
 ]
 
@@ -183,7 +175,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'ds2mermaid', 'ds2mermaid Documentation',
-     [author], 'ds2mermaid', description,
+    (master_doc, 'simple', 'simple Documentation',
+     [author], 'simple', description,
      'Miscellaneous'),
 ]

@@ -6,15 +6,15 @@ requires = [
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ds2mermaid"
-description = "A mermaid diagram generator for doorstop requirements"
+name = "simple"
+description = "A simple project template using setuptools and setuptools-scm"
 dynamic = ["version"]
 readme = "README.rst"
 license = "MIT"
 
 authors = [
-    {name = "Stephen Arnold"},
-    {email = "stephen.arnold42@gmail.com"},
+    {name = "Tracy Developer"},
+    {email = "developer@some.domain"},
 ]
 
 classifiers = [
@@ -34,7 +34,6 @@ classifiers = [
 dependencies = [
     'importlib-resources; python_version < "3.10"',
     "munch[yaml]",
-    "platformdirs",
 ]
 
 requires-python = ">=3.9"
@@ -55,8 +54,10 @@ doc = [
     "sphinx",
     "sphinxcontrib.apidoc",
     "sphinx_git",
-    "recommonmark",
-    "sphinx_rtd_theme<3.0",
+    "myst-parser",
+    "sphinxcontrib.mermaid",
+    "sphinx_rtd_theme<3.0",  # for the version display
+    "sphinx-nefertiti",
 ]
 test = [
     "pytest",
@@ -64,10 +65,10 @@ test = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/sarnold/doorstop-to-mermaid"
-Repository = "https://github.com/sarnold/doorstop-to-mermaid.git"
-Issues = "https://github.com/sarnold/doorstop-to-mermaid/issues"
-Changelog = "https://github.com/sarnold/doorstop-to-mermaid/blob/main/CHANGELOG.rst"
+Homepage = "https://github.com/sarnold/simple-python-project"
+Repository = "https://github.com/sarnold/simple-python-project.git"
+Issues = "https://github.com/sarnold/simple-python-project/issues"
+Changelog = "https://github.com/sarnold/simple-python-project/blob/main/CHANGELOG.rst"
 
 [tool.setuptools]
 package-dir = {"" = "src"}

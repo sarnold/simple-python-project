@@ -14,9 +14,10 @@ per `setuptools documentation`_.
 To use this template, replace the example project name with your own:
 
 * change the project name at the top of ``pyproject.toml``
+* change the project name in ``docs/source/conf.py`` *and* ``docs/source/index.rst``
+* change the author details in ``pyproject.toml`` *and* ``docs/source/conf.py``
 * change the package directory name under the ``src`` folder
 * change the github URL paths in ``pyproject.toml``
-* change the project name in ``docs/source/conf.py``
 
 
 .. _setuptools documentation: https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
@@ -69,8 +70,8 @@ project URL below (using your new project name) and add the following new labels
 Github best practices
 ---------------------
 
-Finally, best practices for public repositories includes following extra
-features:
+Finally, best practices for public repositories should include the following
+extra features:
 
 * under Advanced Security enable Code Scanning, Dependabot, Private
   Vulnerability Reporting, and (default) Codeql config
@@ -157,7 +158,8 @@ types and line numbers. Note you must fix any fatal errors for the
 commit to succeed; some errors should be fixed automatically (use
 ``git status`` and ``git diff`` to review any changes).
 
-See the following sections for more information on gitchangelog and pre-commit.
+See the following sections in the built docs for more information on
+gitchangelog and pre-commit.
 
 You will need to install pre-commit before contributing any changes;
 installing it using your system's package manager is recommended,
