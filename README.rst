@@ -112,8 +112,8 @@ dependencies and run the specified commands, eg:
 
 ::
 
-  $ git clone https://github.com/sarnold/doorstop-to-mermaid
-  $ cd doorstop-to-mermaid/
+  $ git clone https://github.com/sarnold/simple-python-project
+  $ cd simple-python-project/
   $ tox -e py
 
 The above will run the default test command using the (local) default
@@ -177,8 +177,8 @@ something like::
 
 then install it into the repo you just cloned::
 
-  $ git clone git@github.com:sarnold/doorstop-to-mermaid.git
-  $ cd radar-test-gui/
+  $ git clone git@github.com:sarnold/simple-python-project.git
+  $ cd simple-python-project/
   $ pre-commit install
 
 It's usually a good idea to update the hooks to the latest version::
@@ -227,40 +227,40 @@ specifications.
 .. _setuptools_scm: https://setuptools-scm.readthedocs.io/en/stable/
 
 
-.. |ci| image:: https://github.com/sarnold/doorstop-to-mermaid/actions/workflows/ci.yml/badge.svg
-    :target: https://github.com/sarnold/doorstop-to-mermaid/actions/workflows/ci.yml
+.. |ci| image:: https://github.com/sarnold/simple-python-project/actions/workflows/ci.yml/badge.svg
+    :target: https://github.com/sarnold/simple-python-project/actions/workflows/ci.yml
     :alt: CI Status
 
-.. |wheels| image:: https://github.com/sarnold/doorstop-to-mermaid/actions/workflows/wheels.yml/badge.svg
-    :target: https://github.com/sarnold/doorstop-to-mermaid/actions/workflows/wheels.yml
+.. |wheels| image:: https://github.com/sarnold/simple-python-project/actions/workflows/wheels.yml/badge.svg
+    :target: https://github.com/sarnold/simple-python-project/actions/workflows/wheels.yml
     :alt: Wheel Status
 
-.. |badge| image:: https://github.com/sarnold/doorstop-to-mermaid/actions/workflows/pylint.yml/badge.svg
-    :target: https://github.com/sarnold/doorstop-to-mermaid/actions/workflows/pylint.yml
+.. |badge| image:: https://github.com/sarnold/simple-python-project/actions/workflows/pylint.yml/badge.svg
+    :target: https://github.com/sarnold/simple-python-project/actions/workflows/pylint.yml
     :alt: Pylint Status
 
-.. |release| image:: https://github.com/sarnold/doorstop-to-mermaid/actions/workflows/release.yml/badge.svg
-    :target: https://github.com/sarnold/doorstop-to-mermaid/actions/workflows/release.yml
+.. |release| image:: https://github.com/sarnold/simple-python-project/actions/workflows/release.yml/badge.svg
+    :target: https://github.com/sarnold/simple-python-project/actions/workflows/release.yml
     :alt: Release Status
 
-.. |bandit| image:: https://github.com/sarnold/doorstop-to-mermaid/actions/workflows/bandit.yml/badge.svg
-    :target: https://github.com/sarnold/doorstop-to-mermaid/actions/workflows/bandit.yml
+.. |bandit| image:: https://github.com/sarnold/simple-python-project/actions/workflows/bandit.yml/badge.svg
+    :target: https://github.com/sarnold/simple-python-project/actions/workflows/bandit.yml
     :alt: Security check - Bandit
 
-.. |cov| image:: https://raw.githubusercontent.com/sarnold/doorstop-to-mermaid/badges/main/test-coverage.svg
-    :target: https://github.com/sarnold/doorstop-to-mermaid/actions/workflows/coverage.yml
+.. |cov| image:: https://raw.githubusercontent.com/sarnold/simple-python-project/badges/main/test-coverage.svg
+    :target: https://github.com/sarnold/simple-python-project/actions/workflows/coverage.yml
     :alt: Test coverage
 
-.. |pylint| image:: https://raw.githubusercontent.com/sarnold/doorstop-to-mermaid/badges/main/pylint-score.svg
-    :target: https://github.com/sarnold/doorstop-to-mermaid/actions/workflows/pylint.yml
+.. |pylint| image:: https://raw.githubusercontent.com/sarnold/simple-python-project/badges/main/pylint-score.svg
+    :target: https://github.com/sarnold/simple-python-project/actions/workflows/pylint.yml
     :alt: Pylint Score
 
 .. |license| image:: https://img.shields.io/badge/license-MIT-blue
-    :target: https://github.com/sarnold/doorstop-to-mermaid/blob/main/LICENSE
+    :target: https://github.com/sarnold/simple-python-project/blob/main/LICENSE
     :alt: License
 
-.. |tag| image:: https://img.shields.io/github/v/tag/sarnold/doorstop-to-mermaid?color=green&include_prereleases&label=latest%20release
-    :target: https://github.com/sarnold/doorstop-to-mermaid/releases
+.. |tag| image:: https://img.shields.io/github/v/tag/sarnold/simple-python-project?color=green&include_prereleases&label=latest%20release
+    :target: https://github.com/sarnold/simple-python-project/releases
     :alt: GitHub tag
 
 .. |python| image:: https://img.shields.io/badge/python-3.9+-blue.svg
