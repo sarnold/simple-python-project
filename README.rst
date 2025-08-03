@@ -20,8 +20,12 @@ with your own:
 * change the project name at the top of ``pyproject.toml``
 * change the project name in ``docs/source/conf.py`` *and* ``docs/source/index.rst``
 * change the author and copyright names in all the doorstop doc and config files, ie
+
   + ``find . -name .doorstop.yml`` and review/edit all files
 
++ then replace all the doorstop content with your own project details
++ create more doorstop items as needed, link specific design and test
+  elements back to related **Shall** statements
 * change the author details in ``pyproject.toml`` *and* ``docs/source/conf.py``
 * change the package directory name under the ``src`` folder
 * change the github URL paths in ``pyproject.toml``
