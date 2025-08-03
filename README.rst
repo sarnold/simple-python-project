@@ -14,11 +14,21 @@ To create a new repository using this template, click the button labeled
 
 |tag| |license| |reuse| |python|
 
+Template repo cleanup
+~~~~~~~~~~~~~~~~~~~~~
+
 After creating your repository, replace the example project name "simple"
 with your own:
 
 * change the project name at the top of ``pyproject.toml``
 * change the project name in ``docs/source/conf.py`` *and* ``docs/source/index.rst``
+* change the author and copyright names in all the doorstop doc and config files, ie
+
+  + ``find . -name .doorstop.yml`` and review/edit all files
+
+* then replace all the doorstop content with your own project details
+* create more doorstop items as needed, link specific design and test
+  elements back to related **Shall** statements
 * change the author details in ``pyproject.toml`` *and* ``docs/source/conf.py``
 * change the package directory name under the ``src`` folder
 * change the github URL paths in ``pyproject.toml``
@@ -96,10 +106,56 @@ extra features:
 
 
 Dev tools
-=========
+~~~~~~~~~
 
 Local tool dependencies to aid in development; install them for
 maximum enjoyment.
+
+Doorstop
+--------
+
+Initial configurations and first-item doc stubs have been created in the
+following directories::
+
+  $ tree reqs/ docs/swd/ tests/docs/
+  reqs/
+  ├── .doorstop.yml
+  └── REQ001.yml
+  docs/swd/
+  ├── assets
+  │   ├── .gitkeep
+  │   └── simple_dependency_graph.svg
+  ├── .doorstop.yml
+  └── SDD001.md
+  tests/docs/
+  ├── .doorstop.yml
+  └── TST001.yml
+
+The doorstop tool has been added to project [dev] "extras" as well as the
+tox dev and docs environments. Use the "dev" environment for working with
+doorstop_ documents, eg::
+
+  tox -e dev
+  source .venv/bin/activate
+  (.venv) doorstop
+  building tree...
+  loading documents...
+  validating items...
+  WARNING: SDD: SDD001: unreviewed changes
+
+  REQ
+  │
+  ├── TST
+  │
+  └── SDD
+
+
+Please see the doorstop Quick Start for an overview of the relevant doorstop
+commands.
+
+.. _doorstop Quick Start: https://doorstop.readthedocs.io/en/latest/getting-started/quickstart.html
+.. _doorstop: https://doorstop.readthedocs.io/en/latest/index.html
+
 
 Tox
 ---
@@ -187,7 +243,7 @@ It's usually a good idea to update the hooks to the latest version::
 
 
 SBOM and license info
-=====================
+~~~~~~~~~~~~~~~~~~~~~
 
 This project is now compliant with the REUSE Specification Version 3.3, so the
 corresponding license information for all files can be found in the ``REUSE.toml``
@@ -267,10 +323,10 @@ specifications.
     :target: https://www.python.org/downloads/
     :alt: Python
 
-.. |reuse| image:: https://api.reuse.software/badge/git.fsfe.org/reuse/api
-    :target: https://api.reuse.software/info/git.fsfe.org/reuse/api
+.. |reuse| image:: https://img.shields.io/badge/REUSE-compliant-blue.svg
+    :target: https://reuse.software/spec-3.3/
     :alt: REUSE status
 
 .. |pre| image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
-   :target: https://github.com/pre-commit/pre-commit
-   :alt: pre-commit
+    :target: https://github.com/pre-commit/pre-commit
+    :alt: pre-commit
