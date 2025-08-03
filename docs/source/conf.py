@@ -3,10 +3,7 @@ import sys
 
 from datetime import datetime
 
-if sys.version_info < (3, 8):
-    from importlib_metadata import version
-else:
-    from importlib.metadata import version
+from importlib.metadata import version
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 
@@ -49,7 +46,12 @@ extensions = [
     'sphinx.ext.coverage',
     'sphinx.ext.viewcode',
     'myst_parser',
+    #'sphinxcontrib.mermaid',
 ]
+
+#myst_fence_as_directive = ["mermaid"]
+myst_suppress_warnings = ["myst.header"]
+myst_enable_extensions = ["attrs_inline", "deflist", "fieldlist", "substitution",]
 
 # sphinxcontrib.apidoc
 apidoc_module_dir = f'../../src/{project}'
@@ -57,6 +59,7 @@ apidoc_output_dir = 'api'
 apidoc_excluded_paths = ['scripts', 'tests']
 apidoc_module_first = True
 apidoc_separate_modules = True
+
 autodoc_typehints = 'description'
 
 # Add any paths that contain templates here, relative to this directory.

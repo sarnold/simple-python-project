@@ -1,0 +1,24 @@
+settings:
+  digits: 3
+  itemformat: yaml
+  parent: REQ
+  prefix: TST
+  sep: ''
+extensions:
+  item_sha_required: true  # sha256
+attributes:
+  reviewed:
+    - short-name
+  defaults:
+    short-name: ''
+    doc:
+      name: simple
+      title: REQ Integration and Unit Tests
+      ref: ''
+      by: tdeveloper
+      major: '1'
+      minor: A
+      copyright: tdeveloper
+  publish:
+    - commentary
+    - rationale

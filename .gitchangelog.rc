@@ -61,6 +61,7 @@
 ignore_regexps = [
     r'^([cC]i)\s*:',
     r'dependabot',
+    r'automated change',
     r'@minor', r'!minor',
     r'@cosmetic', r'!cosmetic',
     r'@refactor', r'!refactor',

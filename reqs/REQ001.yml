@@ -1,0 +1,42 @@
+active: true
+derived: false
+doc:
+  by: sarnold
+  copyright: tdeveloper
+  major: '1'
+  minor: A
+  name: simple
+  ref: ''
+  title: Requirements for _simple_
+header: ''
+level: 1.0
+links: []
+normative: false
+ref: ''
+reviewed: 3tp2D2vihFUgViix5tF_Ez6tAyWKm1Vd75Te-3kQ0xs=
+short-name: reqs_overview
+text: |
+  Requirements overview
+
+  The simple package is intended to provide a simple but modern example of
+  creating a project/package using setuptools/setuptools-scm with the latest
+  metadata and default build backend for PEP517 compliance.
+
+  The main dependencies are shown below.
+
+  - [importlib-metadata](https://pypi.org/project/importlib-metadata/)
+    - used for runtime version retrieval (for older Python)
+  - [munch](https://github.com/Infinidat/munch)
+    - an example convenience library for adding attribute access to dictionaries
+
+  The simple package should demonstrate the following items.
+
+  - project metadata and tool configuration in pyproject.toml
+  - project docs with auto-generated requirements, SW design, and API/interfaces
+  - getting-started setup doc and github/tox workflow automation
+  - working pre-commit configuration and REUSE license compliance
+
+  > [!IMPORTANT]
+  > The above item `short_name` is a custom doorstop attribute and
+  > must be added to the doorstop config file, as well as populated
+  > with the desired "alias" for the given item.

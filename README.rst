@@ -19,6 +19,9 @@ with your own:
 
 * change the project name at the top of ``pyproject.toml``
 * change the project name in ``docs/source/conf.py`` *and* ``docs/source/index.rst``
+* change the author and copyright names in all the doorstop doc and config files, ie
+  + ``find . -name .doorstop.yml`` and review/edit all files
+
 * change the author details in ``pyproject.toml`` *and* ``docs/source/conf.py``
 * change the package directory name under the ``src`` folder
 * change the github URL paths in ``pyproject.toml``
@@ -267,10 +270,10 @@ specifications.
     :target: https://www.python.org/downloads/
     :alt: Python
 
-.. |reuse| image:: https://api.reuse.software/badge/git.fsfe.org/reuse/api
-    :target: https://api.reuse.software/info/git.fsfe.org/reuse/api
+.. |reuse| image:: https://img.shields.io/badge/REUSE-compliant-blue.svg
+    :target: https://reuse.software/spec-3.3/
     :alt: REUSE status
 
 .. |pre| image:: https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white
-   :target: https://github.com/pre-commit/pre-commit
-   :alt: pre-commit
+    :target: https://github.com/pre-commit/pre-commit
+    :alt: pre-commit
