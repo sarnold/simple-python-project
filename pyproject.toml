@@ -68,6 +68,7 @@ test = [
 
 [project.urls]
 Homepage = "https://github.com/sarnold/simple-python-project"
+Documentation = "https://sarnold.github.io/simple-python-project/"
 Repository = "https://github.com/sarnold/simple-python-project.git"
 Issues = "https://github.com/sarnold/simple-python-project/issues"
 Changelog = "https://github.com/sarnold/simple-python-project/blob/main/CHANGELOG.rst"

@@ -45,6 +45,11 @@ checkout, run the following commands::
   $ git push origin badges
   $ git checkout main
 
+Make a ``gh-pages`` branch
+--------------------------
+
+Follow the same steps shown above, changing the branch name to ``gh-pages``.
+
 
 .. _setuptools documentation: https://setuptools.pypa.io/en/latest/userguide/package_discovery.html
 
@@ -151,10 +156,12 @@ doorstop_ documents, eg::
 
 
 Please see the doorstop Quick Start for an overview of the relevant doorstop
-commands.
+commands. See the `rpmget project`_ for a more fleshed out real-world example
+of using doorstop_ and sphinx together.
 
 .. _doorstop Quick Start: https://doorstop.readthedocs.io/en/latest/getting-started/quickstart.html
 .. _doorstop: https://doorstop.readthedocs.io/en/latest/index.html
+.. _rpmget project: https://github.com/sarnold/rpmget
 
 
 Tox
