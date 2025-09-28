@@ -1,0 +1,7 @@
+simple package
+==============
+
+.. automodule:: simple
+   :members:
+   :undoc-members:
+   :show-inheritance:
