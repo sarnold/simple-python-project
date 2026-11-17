@@ -37,18 +37,18 @@ jobs:
       fail-fast: false
       matrix:
         image:
-          - debian:bookworm
+          - debian:trixie
           - debian:sid
           - fedora:latest
           - fedora:rawhide
           - rockylinux:9
         include:
-          - image: debian:bookworm
-            pkgs: python3.11-venv
-            py3: python3
-          - image: debian:sid
+          - image: debian:trixie
             pkgs: python3.13-venv
             py3: python3
+          - image: debian:sid
+            pkgs: python3.14-venv
+            py3: python3.14
           - image: fedora:latest
             pkgs: python3-devel python3-pip
             py3: python3
@@ -118,7 +118,7 @@ jobs:
         cache-name: cache-pip
       with:
         path: ~/.cache
-        key: ${{ matrix.image }}-${{ env.cache-name }}-${{ hashFiles('**/pyproject.toml') }}
+        key: ${{ matrix.image }}-${{ env.cache-name }}-${{ hashFiles('pyproject.toml') }}
         restore-keys: |
           ${{ matrix.image }}-${{ env.cache-name }}-
 
